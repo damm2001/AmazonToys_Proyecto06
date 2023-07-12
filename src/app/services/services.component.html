@@ -1,6 +1,17 @@
 <!-- Services-->
 <section class="page-section" id="services">
     <div class="container px-4 px-lg-5">
+
+        <!-- Tabla con datos -->
+        <table>
+            <tbody>
+                <tr *ngFor="let datum of data">
+                    <th> {{  datum[ "manufacturer" ]  }}  </th>
+                    <td> {{  datum[ "price" ]  }}  </td>
+                    <td> {{  datum[ "sellers" ]  }} </td>
+                </tr>
+            </tbody>
+        </table>
         <h2 class="text-center mt-0">At Your Service</h2>
         <hr class="divider" />
         <div class="row gx-4 gx-lg-5">

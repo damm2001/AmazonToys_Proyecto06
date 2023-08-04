@@ -22,14 +22,12 @@ export class CalltoactionComponent {
 	}
 
 	generateCharts() {
-		const juguetes_price = this.juguete.slice(21, 31);
-		const juguetes_reviews = this.juguete.slice(10, 20);
+		const juguetes_price = this.juguete.slice(0, 3);
+		const juguetes_reviews = this.juguete.slice(1, 2);
 		this.chartOptions = {
 			animationEnabled: true,
 			theme: "dark2",
 			exportEnabled: true,
-			responsive: true,
-
 			juguete: [{
 				type: "pie",
 				indexLabel: "{name}: {y}%",
@@ -38,12 +36,10 @@ export class CalltoactionComponent {
 		};
 
 		this.chartOptions2 = {
-			animationEnabled: true,
 			theme: "dark2",
 			exportEnabled: true,
-			responsive: true,
 			juguete: [{
-				type: "column",
+				type: "bar",
 				indexLabel: "{y}",
 				juguetePoints: juguetes_reviews.map(juguetes => ({ label: juguetes.product_name, y:juguetes.number_of_reviews })),
 			}]

@@ -8,7 +8,7 @@ import { Juguete } from '../interfaces/juguete';
   styleUrls: ['./calltoaction.component.css']
 })
 export class CalltoactionComponent {
-  public juguete: Juguete[] = [];
+  /*public juguete: Juguete[] = []; 
 	chartOptions = {};
 	chartOptions2 = {};
 
@@ -44,5 +44,5 @@ export class CalltoactionComponent {
 				juguetePoints: juguetes_reviews.map(juguetes => ({ label: juguetes.product_name, y:juguetes.number_of_reviews })),
 			}]
 		};
-	}
+	}*/
 }

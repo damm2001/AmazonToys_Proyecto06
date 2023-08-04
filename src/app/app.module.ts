@@ -13,7 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 //Importacion del modulo
 import { HttpClientModule } from  '@angular/common/http';
-
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 
 @NgModule({
@@ -28,10 +28,11 @@ import { HttpClientModule } from  '@angular/common/http';
     ContactComponent,
     FooterComponent
   ],
-  imports: [
+  imports: [ //Registro de módulo importado
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule  //Registro de módulo importado
+    HttpClientModule,
+    CanvasJSAngularChartsModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

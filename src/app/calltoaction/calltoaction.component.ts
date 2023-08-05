@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
-import { ServicioDatosJuguetesService } from '../providers/servicio-datos-juguetes.service';
+
 import { Juguete } from '../interfaces/juguete';
 
+import { ServicioDatosJuguetesService } from '../providers/servicio-datos-juguetes.service';
+
 @Component({
-  selector: 'app-calltoaction',
-  templateUrl: './calltoaction.component.html',
-  styleUrls: ['./calltoaction.component.css']
+	selector: 'app-calltoaction',
+	templateUrl: './calltoaction.component.html',
+	styleUrls: ['./calltoaction.component.css']
 })
 export class CalltoactionComponent {
-  /*public juguete: Juguete[] = []; 
+	public juguete: Juguete[] = [];
 	chartOptions = {};
 	chartOptions2 = {};
 
-	constructor(private jugueteProvider: ServicioDatosJuguetesService ) { }
+	constructor(private jugueteProvider: ServicioDatosJuguetesService) { }
 
 	ngOnInit() {
 		this.jugueteProvider.getResponse().subscribe((response) => {
@@ -22,27 +24,18 @@ export class CalltoactionComponent {
 	}
 
 	generateCharts() {
-		const juguetes_price = this.juguete.slice(0, 3);
-		const juguetes_reviews = this.juguete.slice(1, 2);
+		const firstFiveData = this.juguete.slice(21, 31);
 		this.chartOptions = {
 			animationEnabled: true,
-			theme: "dark2",
+			theme: "light",
 			exportEnabled: true,
-			juguete: [{
+			responsive: true,
+
+			data: [{
 				type: "pie",
 				indexLabel: "{name}: {y}%",
-				juguetePoints: juguetes_price.map(juguetes => ({ name:juguetes.product_name, y: juguetes.price })),
+				dataPoints: firstFiveData.map(countryData => ({ name: countryData.product_name, y: countryData.number_of_reviews })),
 			}]
 		};
-
-		this.chartOptions2 = {
-			theme: "dark2",
-			exportEnabled: true,
-			juguete: [{
-				type: "bar",
-				indexLabel: "{y}",
-				juguetePoints: juguetes_reviews.map(juguetes => ({ label: juguetes.product_name, y:juguetes.number_of_reviews })),
-			}]
-		};
-	}*/
+	}
 }

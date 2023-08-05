@@ -7,9 +7,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ServicioDatosJuguetesService {
 
+  
+  private URL: string = 'https://toys-966a7-default-rtdb.firebaseio.com/collection.json';
+
   constructor(private http:HttpClient) { }
 
-  private URL: string = 'https://toys-966a7-default-rtdb.firebaseio.com/collection.json';
+  
 
   //Método con la petición HTTP
   getResponse() {

@@ -9,7 +9,7 @@ export interface Juguete {
     manufacturer: string
     number_available_in_stock: string
     number_of_answered_questions: string
-    number_of_reviews: string
+    number_of_reviews: number
     price: string
     product_description: string
     product_information: string

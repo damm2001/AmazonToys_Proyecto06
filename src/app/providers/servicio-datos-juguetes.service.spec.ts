@@ -24,7 +24,11 @@ describe('ServicioDatosJuguetesService', () => {
     service = TestBed.inject(ServicioDatosJuguetesService);
   });
 
-  it('<NOMBRE_METODO> should return value from observable', (done: DoneFn) => {
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it('getResponse() should return value from observable', (done: DoneFn) => {
 
     //Invoque el método con la petición asincrónica
     service.getResponse().subscribe(data => {

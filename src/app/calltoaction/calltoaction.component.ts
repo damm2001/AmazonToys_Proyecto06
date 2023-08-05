@@ -24,7 +24,7 @@ export class CalltoactionComponent {
 	}
 
 	generateCharts() {
-		const firstFiveData = this.juguete.slice(21, 31);
+		const firstTenData = this.juguete.slice(21, 31);
 		this.chartOptions = {
 			animationEnabled: true,
 			theme: "light",
@@ -34,7 +34,7 @@ export class CalltoactionComponent {
 			data: [{
 				type: "pie",
 				indexLabel: "{name}: {y}%",
-				dataPoints: firstFiveData.map(countryData => ({ name: countryData.product_name, y: countryData.number_of_reviews })),
+				dataPoints: firstTenData.map(jug => ({ name: jug.product_name, y: jug.number_of_reviews })),
 			}]
 		};
 	}
